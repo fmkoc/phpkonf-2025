@@ -192,3 +192,11 @@ echo "extension=openswoole" > /opt/homebrew/etc/php/8.4/conf.d/99-openswoole.ini
 ```bash
 php -m | grep openswoole
 ```
+
+### 8. Kill PHP Processes (if needed)
+
+- Kill processes use 9501 port if occupied
+
+```bash
+kill -9 $(lsof -t -i :9501)
+```
